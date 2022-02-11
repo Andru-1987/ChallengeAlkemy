@@ -24,15 +24,16 @@ public class MediaEntity {
 
     private Long idMediaEntity;
 
-    @Column(name="titulo", nullable = false)
-    private String titulo;
+    @Column(name="title", nullable = false)
+    private String title;
 
+    @Column(name="image_url")
     private String imageURL;
 
-    @Column(name="fecha_creacion")
+    @Column(name="release_date")
     @DateTimeFormat(pattern="YYYY/MM/DD")
 
-    private LocalDate fechaCreacion;
+    private LocalDate releaseDate;
 
     private MediaType media; // {"pelicula", "serie"}
 
@@ -43,12 +44,12 @@ public class MediaEntity {
 
     @ManyToOne(fetch = FetchType.EAGER , cascade = CascadeType.ALL)
     // defino valores para no ser modificados
-    @JoinColumn(name="id_genero", insertable = false, updatable = false)
-    private GeneroEntity genero;
+    @JoinColumn(name="id_genre", insertable = false, updatable = false)
+    private GenreEntity genre;
 
     // guardar y actualizar el id
-    @Column(name="id_genero",nullable = false)
-    private Long idGenero;
+    @Column(name="id_genre",nullable = false)
+    private Long idGenre;
 
 
     // Con esto genero una relacion entre muchos a muchos en este caso
@@ -66,12 +67,12 @@ public class MediaEntity {
     // La tabla intermedia. 
     // Por la relacion de muchos a muchos
     @JoinTable(
-        name = "media_personaje",
+        name = "media_character",
         joinColumns = @JoinColumn(name="id_media"),
-        inverseJoinColumns = @JoinColumn(name="id_personaje")
+        inverseJoinColumns = @JoinColumn(name="id_character")
     )
 
-    private Set<PersonajeEntity> personajes= new HashSet<>();
+    private Set<CharacterEntity> characters= new HashSet<>();
 
 
 }

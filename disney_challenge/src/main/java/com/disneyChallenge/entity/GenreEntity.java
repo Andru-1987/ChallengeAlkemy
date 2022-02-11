@@ -6,20 +6,22 @@ import lombok.*;
 
 // Persistence JPA
 @Entity
-@Table(name="genero",catalog ="disney")
+@Table(name="genre",catalog ="disney")
 
 // Usando Lombok
 @Getter
 @Setter
 
-public class GeneroEntity {
+public class GenreEntity {
     @Id
     // por lo general hace falta llamarlo (pero por razones de aprendizaje)
-    @Column(name="id_genero")
+    @Column(name="id_genre")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
 
-    Long idGenero;
+    private Long idGenre;
+    @Column(name="name", nullable = false)
+    private String name;
 
-    String nombre;
-    String imageURL;
+    @Column(name="image_url")
+    private String imageURL;
 }
