@@ -1,0 +1,51 @@
+REST API
+
+Request and Response
+
+Request
+    VERBO (GET,PUT, DELETE, POST ... )
+    URL /users
+        /users/{id}
+        /
+    BODY
+    HEADERS
+
+
+Response
+HTTP STATUS CODE
+BODY 
+HEADERS
+OTHERS
+
+
+
+HTTP STATUS CODE
+
+200 Satisfactory response OK
+    201 CREATED
+    202 ACCEPTED
+300 Relocations
+400 Errors Bad Request
+    401 UNAUTHORIZED
+    404 Not Found
+500 => servidor: Internal server Error
+    503 Service Unavailable
+    504 Gateway Timeout => es un time determinado
+
+    Request
+<POSTMAN>    <API>
+    Response
+
+
+DTO vs Entidades
+
+ DTO  *Controller* DTO *Service*  Entity *Repository*  => MySQL
+
+
+Para Generar 
+Servidor
+    Controller
+    Service
+    Entity
+    DTO (data transfer object)
+
