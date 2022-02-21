@@ -31,3 +31,11 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=false
 ```
+
+
+Unidad #2
+1. Se agregaron las capas de 
+	*Controller => Vinculación
+	*Service => Logica
+	*Repository => Guardado de Entidades en BaseDatos
+	*Mapper => Transformador
