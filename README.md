@@ -1,6 +1,7 @@
 ### This is the info-log of the pre-challenge for Alkemy in JAVA
 
-## USING THEIA Blueprint (as IDE)
+## ~~USING THEIA Blueprint (as IDE)~~
+## USING IntelliJ as IDE
 
 # Dependencies
 	*Spring Web*
